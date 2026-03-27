@@ -24,8 +24,8 @@ jobs:
 
       - name: Run screener
         env:
-          TELEGRAM_TOKEN:   ${{ 8519111017:AAFZ_rU7MVXrkt8upJ11XBwyZbYSzBKdWxo }}
-          TELEGRAM_CHAT_ID: ${{ 553056941 }}
+          TELEGRAM_TOKEN:   ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           MIN_GAIN_PCT:     "100"
           MIN_RSI:          "75"
           MAX_PRICE:        "5.0"
