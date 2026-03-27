@@ -18,7 +18,8 @@ TELEGRAM_TOKEN   = os.environ.get("TELEGRAM_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 
 # Minimum trade size in USD to trigger an alert
-WHALE_THRESHOLD_USD = int(os.environ.get("WHALE_THRESHOLD_USD", "10000"))
+_threshold_raw = os.environ.get("WHALE_THRESHOLD_USD", "").strip()
+WHALE_THRESHOLD_USD = int(_threshold_raw) if _threshold_raw else 10000
 
 # Optional: only alert if market question contains one of these keywords.
 # Leave as empty string "" to track ALL markets.
